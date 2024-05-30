@@ -81,6 +81,7 @@ web/build/
 *.rar
 *.7z
 *.bak
+*.gradle
 
 # JetBrains IDEs
 .idea/
@@ -88,4 +89,3 @@ web/build/
 
 # VS Code
 .vscode/
-

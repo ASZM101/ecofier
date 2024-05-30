@@ -10,7 +10,7 @@ environment:
 
 dependencies:
   logger: ^2.3.0
-  camera: ^0.10.0+2
+  camera: ^0.11.0+1
   flutter:
     sdk: flutter
 
