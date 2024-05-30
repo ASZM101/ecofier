@@ -1,52 +1,87 @@
-# Dart
+# Flutter related
 .dart_tool/
-.packages
-build/
-pubspec.lock
-doc/api/
-.env*
-*.dart.js
-*.info.json
-*.js
-*.js_
-*.js.deps
-*.js.map
 .flutter-plugins
 .flutter-plugins-dependencies
-
-# Android
-.gradle/
+.packages
 build/
-local.properties
-*.log
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
-*.iml
+.pub-cache/
+.pub/
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-*.jks
-*.keystore
-google-services.json
-*.hprof
+.vscode/
+.macos/
+*.iml
 
-# Apple
-xcuserdata/
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
-Carthage/Build/
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
-iOSInjectionProject/
-timeline.xctimeline
-playground.xcworkspace
-.build/
+# Android related
+android/.gradle/
+android/app/build/
+android/local.properties
+android/.idea
+android/*.iml
+android/captures/
+android/gradle/wrapper/gradle-wrapper.properties
+
+# iOS related
+ios/Flutter/.last_build_id
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/ServiceDefinitions.json
+ios/Runner.xcworkspace/
+ios/Runner.xcworkspace/contents.xcworkspacedata
+ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+ios/Runner.xcodeproj/xcuserdata/
+ios/Runner.xcodeproj/xcshareddata/
+ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json
+ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json
+
+# macOS related
+macos/Flutter/ephemeral/
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/.symlinks/
+macos/Flutter/flutter_export_environment.sh
+
+# Web related
+web/.dart_tool/
+web/.flutter-plugins
+web/.flutter-plugins-dependencies
+web/build/
+
+# Miscellaneous
+**/*.log
+**/*.lock
+**/*.log.*
+**/*.lock.*
 .DS_Store
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*.backup
+*.rej
+*.exe
+*.out
+*.class
+*.pyc
+*.pyo
+*.cache
+*.bin
+*.old
+*.gz
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.bak
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# VS Code
+.vscode/
