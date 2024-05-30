@@ -364,6 +364,8 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to help you Ecofy your room.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need microphone access to enable the camera to function properly.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,6 +545,8 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to help you Ecofy your room.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need microphone access to enable the camera to function properly.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,6 +569,8 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to help you Ecofy your room.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need microphone access to enable the camera to function properly.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
