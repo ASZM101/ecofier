@@ -30,7 +30,7 @@ class CameraScreen extends StatefulWidget {
 }
 
 class _CameraScreenState extends State<CameraScreen> {
-  late CameraController controller;
+  CameraController controller = CameraController(cameras.first, ResolutionPreset.high);
 
   @override
   void initState() {
