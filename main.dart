@@ -61,6 +61,7 @@ class CameraScreenState extends State<CameraScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(title: const Text('Camera')),
       body: FutureBuilder<void>(
@@ -68,7 +69,20 @@ class CameraScreenState extends State<CameraScreen> {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             if (controller != null && controller!.value.isInitialized) {
-              return CameraPreview(controller!);
+              final aspectRatio = controller!.value.aspectRatio;
+              var w = size.width;
+              var h = size.width/aspectRatio;
+              if(h > size.height) {
+                h = size.height;
+                w = size.height*aspectRatio;
+              }
+              return Center(
+                child: SizedBox(
+                  width: w,
+                  height: h,
+                  child: CameraPreview(controller!),
+                ),
+              );
             } else {
               return const Center(
                 child: Text('Error: No camera initialized'),

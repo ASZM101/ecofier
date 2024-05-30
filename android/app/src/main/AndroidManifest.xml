@@ -1,6 +1,11 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" packag="com.aszm101.ecofier">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
-        android:label="ecofier_frontend"
+        android:label="Ecofier"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
