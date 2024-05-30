@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
-
-List<CameraDescription> cameras = <CameraDescription>[];
+import 'package:logger/logger.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  cameras = await availableCameras();
   runApp(const MyApp());
 }
 
@@ -26,11 +24,13 @@ class CameraScreen extends StatefulWidget {
   const CameraScreen({super.key});
 
   @override
-  _CameraScreenState createState() => _CameraScreenState();
+  CameraScreenState createState() => CameraScreenState();
 }
 
-class _CameraScreenState extends State<CameraScreen> {
-  CameraController controller = CameraController(cameras.first, ResolutionPreset.high);
+class CameraScreenState extends State<CameraScreen> {
+  CameraController? controller;
+  Future<void>? initializeControllerFuture;
+  final Logger _logger = Logger();
 
   @override
   void initState() {
@@ -39,29 +39,52 @@ class _CameraScreenState extends State<CameraScreen> {
   }
 
   Future<void> initializeCamera() async {
-    controller = CameraController(cameras[0], ResolutionPreset.high);
     try {
-      await controller.initialize();
+      final cameras = await availableCameras();
+      if (cameras.isEmpty) {
+        throw CameraException('Camera not available', 'Make sure your device has a functioning camera and try again.');
+      }
+      final firstCamera = cameras.first;
+      controller = CameraController(firstCamera, ResolutionPreset.high);
+      initializeControllerFuture = controller!.initialize();
       setState(() {});
-    } catch (e) {
-      print('Error initializing camera: $e');
+    } catch (e, stacktrace) {
+      _logger.e('Camera initialization error', error: e, stackTrace: stacktrace);
     }
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    controller?.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    if (!controller.value.isInitialized) {
-      return const Center(child: CircularProgressIndicator());
-    }
     return Scaffold(
-      appBar: AppBar(title: const Text('Camera Access')),
-      body: CameraPreview(controller),
+      appBar: AppBar(title: const Text('Camera')),
+      body: FutureBuilder<void>(
+        future: initializeControllerFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            if (controller != null && controller!.value.isInitialized) {
+              return CameraPreview(controller!);
+            } else {
+              return const Center(
+                child: Text('Error: No camera initialized'),
+                );
+            }
+          } else if (snapshot.hasError) {
+            return Center(
+              child: Text('Error: ${snapshot.error}'),
+              );
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+              );
+          }
+        },
+      ),
     );
   }
 }
