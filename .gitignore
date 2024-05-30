@@ -37,6 +37,9 @@ ios/Runner.xcodeproj/xcuserdata/
 ios/Runner.xcodeproj/xcshareddata/
 ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json
 ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json
+ios/Flutter/Flutter 2.podspec
+ios/Flutter/flutter_export_environment 2.sh
+ios/Flutter/Generated 2.xcconfig
 
 # macOS related
 macos/Flutter/ephemeral/
@@ -85,3 +88,4 @@ web/build/
 
 # VS Code
 .vscode/
+
