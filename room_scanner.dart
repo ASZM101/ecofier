@@ -17,10 +17,7 @@ void main() async {
 class CameraScreen extends StatefulWidget {
   final CameraDescription camera;
 
-  const CameraScreen({
-    Key? key,
-    required this.camera,
-  }) : super(key: key);
+  const CameraScreen({super.key, required this.camera});
 
   @override
   CameraScreenState createState() => CameraScreenState();
