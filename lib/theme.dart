@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use
 import 'package:flutter/material.dart';
-
 class GlobalThemeData {
   static final Color lightFocusColor = Colors.black.withOpacity(0.12);
   static final Color darkFocusColor = Colors.white.withOpacity(0.12);

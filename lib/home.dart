@@ -21,8 +21,25 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Welcome to Ecofier',
+                'Welcome to',
                 style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              Container(
+                color: Colors.indigo,
+                height: 200,
+                width: 200,
+                child: Image.asset(
+                  'assets/img/logo.png', 
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Text(
+                'Ecofy Your Room',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              Text(
+                'Help the World',
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
             ],
           ),
