@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
-//import 'package:camera/camera.dart';
-//import 'room_scanner.dart';
+import 'package:camera/camera.dart';
 import 'home.dart';
 import 'theme.dart';
 
 void main() async {
-  //WidgetsFlutterBinding.ensureInitialized();
-  // final cameras = await availableCameras();
-  // final firstCamera = cameras.first;
-  // runApp(EcofierApp(camera: firstCamera));
-  runApp(const EcofierApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  final cameras = await availableCameras();
+  final firstCamera = cameras.first;
+  runApp(EcofierApp(camera: firstCamera));
 }
 
 class EcofierApp extends StatelessWidget {
-  const EcofierApp({super.key});
 
-  // final CameraDescription camera;
-  // const EcofierApp({super.key, required this.camera});
+  final CameraDescription camera;
+  const EcofierApp({super.key, required this.camera});
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +22,7 @@ class EcofierApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: GlobalThemeData.lightThemeData,
       darkTheme: GlobalThemeData.darkThemeData,
-      home: const Home(),
-      //home: CameraScreen(camera: camera),
+      home: Home(camera: camera),
     );
   }
 }

@@ -66,16 +66,22 @@ class GlobalThemeData {
         fontWeight: FontWeight.w900,
         color: colorScheme.secondary,
       ),
-      bodyMedium: TextStyle(
+      bodyLarge: TextStyle(
         fontFamily: 'Baloo2',
         fontSize: 25,
         fontWeight: FontWeight.w900,
         color: colorScheme.primary,
       ),
+      bodyMedium: TextStyle(
+        fontFamily: 'Baloo2',
+        fontSize: 25,
+        fontWeight: FontWeight.w900,
+        color: colorScheme.onSurface,
+      ),
       bodySmall: TextStyle(
         fontFamily: 'Baloo2',
         fontSize: 20,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.normal,
         color: colorScheme.onBackground,
       ),
     );
