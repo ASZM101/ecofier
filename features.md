@@ -9,7 +9,7 @@
 * **About Ecofier**: purpose and instructions
     * Briefly describes what Ecofier is and its purpose/mission
     * Explains how to use camera and photo gallery
-* **Camera**: takes pictures of room
+* **Room Scanner**: takes pictures of room
     * After picture taken, user taken to Analyzer
 * **Photo Gallery**: stores all previous pictures, allows user to upload photos of room to analyze
     * User can select previous picture to analyze
