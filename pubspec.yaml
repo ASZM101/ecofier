@@ -9,6 +9,7 @@ environment:
   sdk: ^3.1.1
 
 dependencies:
+  cupertino_icons: ^1.0.8
   logger: ^2.3.0
   camera: ^0.11.0+1
   flutter:
@@ -33,11 +34,18 @@ flutter_icons:
 flutter:
   uses-material-design: true
 
+  assets:
+    - assets/img/
+
 fonts:
   - family: Baloo2
     fonts:
-      - asset: fonts/Baloo2-Regular.ttf
-      - asset: fonts/Baloo2-Medium.ttf
-      - asset: fonts/Baloo2-SemiBold.ttf
-      - asset: fonts/Baloo2-Bold.ttf
-      - asset: fonts/Baloo2-ExtraBold.ttf
+      - asset: assets/fonts/Baloo2-Regular.ttf
+      - asset: assets/fonts/Baloo2-Medium.ttf
+        weight: 600
+      - asset: assets/fonts/Baloo2-SemiBold.ttf
+        weight: 700
+      - asset: assets/fonts/Baloo2-Bold.ttf
+        weight: 800
+      - asset: assets/fonts/Baloo2-ExtraBold.ttf
+        weight: 900

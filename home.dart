@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'theme.dart';
 
 void main() async {
   runApp(const Home());
@@ -22,9 +22,7 @@ class Home extends StatelessWidget {
             children: [
               Text(
                 'Welcome to Ecofier',
-                style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                  color: GlobalThemeData.lightThemeData.colorScheme.primary,
-                ),
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
             ],
           ),
