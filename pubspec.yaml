@@ -32,3 +32,12 @@ flutter_icons:
   
 flutter:
   uses-material-design: true
+
+fonts:
+  - family: Baloo2
+    fonts:
+      - asset: fonts/Baloo2-Regular.ttf
+      - asset: fonts/Baloo2-Medium.ttf
+      - asset: fonts/Baloo2-SemiBold.ttf
+      - asset: fonts/Baloo2-Bold.ttf
+      - asset: fonts/Baloo2-ExtraBold.ttf

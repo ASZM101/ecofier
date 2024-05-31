@@ -82,7 +82,6 @@ class CameraScreenState extends State<CameraScreen> {
       theme: GlobalThemeData.lightThemeData,
       darkTheme: GlobalThemeData.darkThemeData,
       home: Scaffold(
-        appBar: AppBar(title: const Text('Room Scanner')),
         body: OrientationBuilder(
           builder: (context, orientation) {
             return FutureBuilder<void>(
